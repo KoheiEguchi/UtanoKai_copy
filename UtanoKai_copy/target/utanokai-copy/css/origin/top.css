@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+/*ここから新着歌の表示関連*/
+.linkMenuTanka, .linkMenuChoka{
+	text-decoration: none;
+	display: block;
+	position: relative;
+	top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.linkMenuTanka:hover{
+	text-decoration: none;
+	display: block;
+}
+.linkMenuChoka:hover{
+	text-decoration: none;
+	display: block;
+}
+.linkMenuHaiku, .linkMenuDodoitsu{
+	text-decoration: none;
+	display: block;
+	position: relative;
+	top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.linkMenuHaiku:hover{
+	text-decoration: none;
+	display: block;
+}
+.linkMenuDodoitsu:hover{
+	text-decoration: none;
+	display: block;
+}
+
+.whiteHover{
+	color: white;
+}
+.whiteHover:hover{
+	color: white;
+}
+.blackHover{
+	color: black;
+}
+.blackHover:hover{
+	color: black;
+}
+
+.rightPic{
+	margin-right: 280px;
+}
+
+.tops .col-md-6{
+	padding: 0;
+}
+/*ここまで新着歌の表示関連*/
+
+/*ここから高評価歌の表示関連*/
+.goodHaiku{
+	background-color: #98fb98;
+}
+.goodTanka{
+	background-color: #87cefa;
+}
+.goodChoka{
+	background-color: #eee8aa;
+}
+.goodDodoitsu{
+	background-color: #ffb6c1;
+}
+/*ここまで高評価歌の表示関連*/
+
+/*ここから各歌の種類の説明タブ関連*/
+.itemHaiku{
+	background-color: #98fb98;
+}
+.itemTanka{
+	background-color: #87cefa;
+}
+.itemChoka{
+	background-color: #eee8aa;
+}
+.itemDodoitsu{
+	background-color: #ffb6c1;
+}
+
+.nav-link{
+	color: black;
+	font-family: “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, serif;
+}
+
+.navHaiku.active{
+	color: black !important;
+	background-color: #98fb98 !important;
+	filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
+}
+.navTanka.active{
+	color: black !important;
+	background-color: #87cefa !important;
+	filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
+}
+.navChoka.active{
+	color: black !important;
+	background-color: #eee8aa !important;
+	filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
+}
+.navDodoitsu.active{
+	color: black !important;
+	background-color: #ffb6c1 !important;
+	filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
+}
+
+.haikuTab, .navHaiku:hover{
+	color: black;
+	background-color: #98fb98;
+	filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
+}
+.tankaTab, .navTanka:hover{
+	color: black;
+	background-color: #87cefa;
+	filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
+}
+.chokaTab, .navChoka:hover{
+	color: black;
+	background-color: #eee8aa;
+	filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
+}
+.dodoitsuTab, .navDodoitsu:hover{
+	color: black;
+	background-color: #ffb6c1;
+	filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
+}
+/*ここまで各歌の種類の説明タブ関連*/

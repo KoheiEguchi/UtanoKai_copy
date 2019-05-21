@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/*ここから季語一覧関連*/
+.itemSpring{
+	background-color: #fef4f4;
+}
+.navSpring:hover, .navSpring.active, .springTab{
+	color: black !important;
+	background-color: #fef4f4 !important;
+	filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
+}
+
+.itemSummer{
+	background-color: #a8c97f;
+}
+.navSummer:hover, .navSummer.active, .summerTab{
+	color: black !important;
+	background-color: #a8c97f !important;
+	filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
+}
+
+.itemAutumn{
+	background-color: #f8b862;
+}
+.navAutumn:hover, .navAutumn.active, .autumnTab{
+	color: black !important;
+	background-color: #f8b862 !important;
+	filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
+}
+
+.itemWinter{
+	background-color: #eaf4fc;
+}
+.navWinter:hover, .navWinter.active, .winterTab{
+	color: black !important;
+	background-color: #eaf4fc !important;
+	filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
+}
+/*ここまで季語一覧関連*/
+
+/*縦書きにする*/
+.composeTwist{
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+}
+
+/*歌の種類と思い入力欄の背景色*/
+.composeBg{
+	background-color: #fffaf0;
+}
+
+/*ラジオボタンの◯を消す*/
+input[type="radio"]{
+	display: none;
+}
+/*ボタン上のカーソル変更*/
+.composeBtn{
+	cursor: pointer;
+}
+/*ボタン内の字の大きさとフォント変更*/
+.font{
+	font: xx-large “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, serif;
+}
+/*小画面でのボタン改行禁止*/
+.genreBtns{
+	white-space: nowrap;
+}
+
+/*歌の本文入力欄の背景色*/
+.composeHaikuBg{
+	background-color: #faebd7;
+}
+/*歌の本文入力欄の形設定*/
+.composeHaiku{
+	writing-mode: initial;
+	transform: rotate(90deg);
+	margin-right: -15%;
+	cursor: vertical-text;
+}
+
+/*歌の思い入力欄の形設定*/
+.composeComment{
+	writing-mode: initial;
+	transform: rotate(90deg);
+	margin-right: -10%;
+	cursor: vertical-text;
+}

@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/*会員一覧の表示設定*/
+.userList{
+	margin-left: 300px;
+	width: 60%;
+}
+
+/*会員にカーソルを合わせた時の色変更*/
+.userData:hover{
+	background-color: #ffe4b5;
+}

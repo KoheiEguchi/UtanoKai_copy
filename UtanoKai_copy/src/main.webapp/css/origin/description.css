@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+/*改行位置設定*/
+span{
+	display: inline-block;
+}

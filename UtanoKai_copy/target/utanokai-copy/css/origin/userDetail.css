@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/*ここから歌一覧の格納関連*/
+.noIcon::-webkit-details-marker{
+	display: none;
+}
+.noIcon{
+	display: block;
+}
+/*ここまで歌一覧の格納関連*/
+
+/*カーソル合わせ時の色変更*/
+.userHaikus:hover{
+	background-color: #5cb85c !important;
+}
+.userTankas:hover{
+	background-color: #5bc0de !important;
+}
+.userChokas:hover{
+	background-color: #f0ad4e !important;
+}
+.userDodoitsus:hover{
+	background-color: #d9534f !important;
+}

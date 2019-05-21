@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+/*ここからサイト名表示関連*/
+.title{
+	background: url(../../img/title.jpg) center no-repeat;
+	background-size: cover;
+	height: 20vh;
+}
+.titleWord:hover{
+	color: black;
+	text-decoration: none;
+}
+.titleArea{
+	margin-top: -4vh;
+}
+/*ここまでサイト名表示関連*/
+
+/*文を中央に置きフォントも設定*/
+h1, h2, h3, h4, p, div{
+	text-align: center;
+	font-family: “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, serif;
+}
+
+/*ボタン周りの青線削除*/
+input[type="submit"], input[type="button"]{
+	outline: none;
+}
+
+/*各一覧題部分の幅調整*/
+.haikusGenre{
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+/*折りたたみ部分の調整*/
+summary{
+	cursor: pointer;
+	outline: none;
+	text-align: center;
+}
+
+/*タブ表示の文字*/
+.nav-link{
+	color: black;
+	font-family: “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, serif;
+	display: flex;
+    height: 100%;
+}
+
+/*歌の内容を縦書きにする*/
+.list{
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	-webkit-text-orientation: upright;
+	float: right;
+	position: relative;
+}
+
+/*個人情報ページへ飛ぶ俳号の表示*/
+.linkName{
+	color: #000080;
+}
+.linkName:hover{
+	text-decoration: none;
+	background-color: #faf0e6;
+	color: #000080;
+	border-radius: 10px;
+}
+
+/*高評価ボタン設定*/
+.linkGood{
+	color: #f08300;
+	font-size: 120%;
+}
+.linkGood:hover{
+	color: #f08300;
+	font-size: 120%;
+	background-color: #000080;
+	border-radius: 10px;
+	text-decoration: none;
+}
+
+/*ここから歌の拡大関連*/
+.zoom{
+	transition: .3s;
+	-webkit-transform: scale(1.0);
+  	transform: scale(1.0);
+}
+.zoom:hover{
+	-webkit-transform: scale(1.05);
+  	transform: scale(1.05);
+  	z-index: 990;
+}
+/*ここまで歌の拡大関連*/
+
+/*文字を白くする*/
+.whiteWord{
+	color: white;
+}
+
+/*横並び表示を整える*/
+.lists{
+	display: inline;
+}
+
+/*歌の削除ボタン設定*/
+.deleteHaiku{
+	writing-mode: initial;
+	transform: rotate(90deg);
+	margin-right: -22%;
+	margin-top: 30%;
+}
