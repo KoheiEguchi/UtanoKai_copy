@@ -18,7 +18,7 @@
     </dependency>
   </dependencies>
   <build>
-  	<finalName>utanokai-maven</finalName>
+  	<finalName>utanokai-copy</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>

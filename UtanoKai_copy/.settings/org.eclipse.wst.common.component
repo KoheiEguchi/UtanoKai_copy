@@ -4,7 +4,7 @@
         <wb-resource deploy-path="/" source-path="/src/main.webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
-        <property name="java-output-path" value="/UtannoKai_copy/build/classes"/>
         <property name="context-root" value="UtanoKai_maven"/>
+        <property name="java-output-path" value="/UtanoKai_maven/target/classes"/>
     </wb-module>
 </project-modules>
