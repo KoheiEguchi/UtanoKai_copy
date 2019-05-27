@@ -63,13 +63,13 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 order-md-2 h-100 pt-3 composeHaikuBg composeTwist">
+					<div class="col-md-4 order-md-2 pt-3 composeHaikuBg composeTwist composeMainArea">
 						<h4 class="text-left py-4">本文</h4>
 						<p>
 							<textarea class="composeHaiku" name="haiku" cols="46" rows="5" placeholder="歌をお詠みください"></textarea>
 						</p>
 					</div>
-					<div class="col-md-4 order-md-1 h-100 pt-3 composeBg composeTwist">
+					<div class="col-md-4 order-md-1 pt-3 composeBg composeTwist composeMainArea">
 						<h4 class="text-left py-4">込めた思い</h4>
 						<p>
 							<textarea class="composeComment" name="comment" cols="46" rows="10" placeholder="この歌に込めた思いや解説等をお書きください"></textarea>

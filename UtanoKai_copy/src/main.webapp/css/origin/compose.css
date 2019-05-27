@@ -85,3 +85,16 @@ input[type="radio"]{
 	margin-right: -10%;
 	cursor: vertical-text;
 }
+@media screen and(max-width: 599px){
+	.composeComment{
+		writing-mode: initial;
+		transform: rotate(90deg);
+		margin-right: -20%;
+		cursor: vertical-text;
+	}
+}
+
+.composeMainArea{
+	height: 500px;
+	min-height: 100%;
+}
