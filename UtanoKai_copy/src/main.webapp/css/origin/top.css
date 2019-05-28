@@ -87,6 +87,12 @@
 	background-color: #ffb6c1;
 }
 
+@media(max-width: 599px){
+	.mobileHidden{
+		display: none;
+	}
+}
+
 .nav-link{
 	color: black;
 	font-family: “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, serif;

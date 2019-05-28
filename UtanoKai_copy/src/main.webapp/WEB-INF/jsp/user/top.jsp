@@ -33,14 +33,12 @@
 								<div class="col-2 h3 font-weight-normal">俳句・川柳</div>
 								<c:forEach items="${newHaiku}" var="haiku">
 									<div class="col-1 text-left py-3">${haiku.strComposeDate} ${haiku.strComposeTime}</div>
-									<div class="col-3 text-left py-3 font-weight-bold">
-										${haiku.haiku}
-										<div class="text-right mb-4">
-											<object><a class="linkName" href="UserDetail?name=${haiku.composer}">${haiku.composer}</a></object>
-										</div>
+									<div class="col-2 text-left py-3 font-weight-bold">${haiku.haiku}</div>
+									<div class="col-1 text-right mb-4">
+										<object><a class="linkName" href="UserDetail?name=${haiku.composer}">${haiku.composer}</a></object>
 									</div>
-									<div class="col-3">${haiku.comment}</div>
-									<div class="col-1">
+									<div class="col-3 mobileHidden">${haiku.comment}</div>
+									<div class="col-2">
 										<c:if test="${name != haiku.composer}">
 											<p class="text-right">
 												<object>
@@ -62,7 +60,7 @@
 											</c:if>
 										</c:if>
 									</div>
-									<div class="col-2"></div>
+									<div class="col-1"></div>
 								</c:forEach>
 							</a>
 						</div>
@@ -71,14 +69,12 @@
 								<div class="col-2 h3 font-weight-normal">短歌</div>
 								<c:forEach items="${newTanka}" var="tanka">
 									<div class="col-1 text-left py-3">${tanka.strComposeDate} ${tanka.strComposeTime}</div>
-									<div class="col-3 text-left py-3 font-weight-bold">
-										${tanka.haiku}
-										<div class="text-right mb-4">
-											<object><a class="linkName" href="UserDetail?name=${tanka.composer}">${tanka.composer}</a></object>
-										</div>
+									<div class="col-2 text-left py-3 font-weight-bold">${tanka.haiku}</div>
+									<div class="col-1 text-right mb-4">
+										<object><a class="linkName" href="UserDetail?name=${tanka.composer}">${tanka.composer}</a></object>
 									</div>
-									<div class="col-3">${tanka.comment}</div>
-									<div class="col-1">
+									<div class="col-3 mobileHidden">${tanka.comment}</div>
+									<div class="col-2">
 										<c:if test="${name != tanka.composer}">
 											<p class="text-right">
 												<object>
@@ -100,7 +96,7 @@
 											</c:if>
 										</c:if>
 									</div>
-									<div class="col-2"></div>
+									<div class="col-1"></div>
 								</c:forEach>
 							</a>
 						</div>
@@ -108,17 +104,15 @@
 					<div class="row tops">
 						<div class="col-md-6 col-xs-12 order-md-2 bg-warning shadow list zoom">
 							<a class="linkMenuChoka blackHover" href="List?genre=3">
-								<div class="col-1 h3 font-weight-normal">長歌</div>
+								<div class="col-2 h3 font-weight-normal">長歌</div>
 								<c:forEach items="${newChoka}" var="choka">
 									<div class="col-1 text-left py-3">${choka.strComposeDate} ${choka.strComposeTime}</div>
-									<div class="col-4 text-left py-3 font-weight-bold">
-										${choka.haiku}
-										<div class="text-right mb-4">
-											<object><a class="linkName" href="UserDetail?name=${choka.composer}">${choka.composer}</a></object>
-										</div>
+									<div class="col-4 text-left py-3 font-weight-bold">${choka.haiku}</div>
+									<div class="col-1 text-right mb-4">
+										<object><a class="linkName" href="UserDetail?name=${choka.composer}">${choka.composer}</a></object>
 									</div>
-									<div class="col-2">${choka.comment}</div>
-									<div class="col-3">
+									<div class="col-1 mobileHidden">${choka.comment}</div>
+									<div class="col-2">
 										<c:if test="${name != choka.composer}">
 											<p class="text-right">
 												<object>
@@ -149,14 +143,12 @@
 								<div class="col-2 h3 font-weight-normal">都々逸</div>
 								<c:forEach items="${newDodoitsu}" var="dodoitsu">
 									<div class="col-1 text-left py-3">${dodoitsu.strComposeDate} ${dodoitsu.strComposeTime}	</div>
-									<div class="col-3 text-left py-3 font-weight-bold">
-										${dodoitsu.haiku}
-										<div class="text-right mb-4">
-											<object><a class="linkName" href="UserDetail?name=${dodoitsu.composer}">${dodoitsu.composer}</a></object>
-										</div>
+									<div class="col-2 text-left py-3 font-weight-bold">${dodoitsu.haiku}</div>
+									<div class="col-1 text-right mb-4">
+										<object><a class="linkName" href="UserDetail?name=${dodoitsu.composer}">${dodoitsu.composer}</a></object>
 									</div>
-									<div class="col-3">${dodoitsu.comment}</div>
-									<div class="col-1">
+									<div class="col-3 mobileHidden">${dodoitsu.comment}</div>
+									<div class="col-2">
 										<c:if test="${name != dodoitsu.composer}">
 											<p class="text-right">
 												<object>
@@ -178,7 +170,7 @@
 											</c:if>
 										</c:if>
 									</div>
-									<div class="col-2"></div>
+									<div class="col-1"></div>
 								</c:forEach>
 							</a>
 						</div>
@@ -200,7 +192,7 @@
 										<div class="col-1 text-right">
 											<object><a class="linkName" href="UserDetail?name=${haiku.composer}">${haiku.composer}</a></object>
 										</div>
-										<div class="col-3">${haiku.comment}</div>
+										<div class="col-3 mobileHidden">${haiku.comment}</div>
 										<div class="col-2">
 											<c:if test="${name != haiku.composer}">
 												<p class="text-right">
@@ -242,7 +234,7 @@
 										<div class="col-1 text-right">
 											<object><a class="linkName" href="UserDetail?name=${tanka.composer}">${tanka.composer}</a></object>
 										</div>
-										<div class="col-3">${tanka.comment}</div>
+										<div class="col-3 mobileHidden">${tanka.comment}</div>
 										<div class="col-2">
 											<c:if test="${name != tanka.composer}">
 												<p class="text-right">
@@ -285,7 +277,7 @@
 												<object><a class="linkName" href="UserDetail?name=${choka.composer}">${choka.composer}</a></object>
 											</div>
 										</div>
-										<div class="col-3">${choka.comment}</div>
+										<div class="col-3 mobileHidden">${choka.comment}</div>
 										<div class="col-3">
 											<c:if test="${name != choka.composer}">
 												<p class="text-right">
@@ -326,7 +318,7 @@
 										<div class="col-1 text-right">
 											<object><a class="linkName" href="UserDetail?name=${dodoitsu.composer}">${dodoitsu.composer}</a></object>
 										</div>
-										<div class="col-3">${dodoitsu.comment}</div>
+										<div class="col-3 mobileHidden">${dodoitsu.comment}</div>
 										<div class="col-2">
 											<c:if test="${name != dodoitsu.composer}">
 												<p class="text-right">
@@ -370,10 +362,26 @@
 				<div class="col-md-2 col-xs-1"></div>
 				<div class="col-md-8 col-xs-10">
 					<ul class="nav nav-tabs">
-						<li class="nav-item w-25 itemHaiku"><a href="#haiku" class="nav-link active navHaiku" data-toggle="tab">俳句・川柳とは？</a></li>
-						<li class="nav-item w-25 itemTanka"><a href="#tanka" class="nav-link navTanka" data-toggle="tab">短歌とは？</a></li>
-						<li class="nav-item w-25 itemChoka"><a href="#choka" class="nav-link navChoka" data-toggle="tab">長歌とは？</a></li>
-						<li class="nav-item w-25 itemDodoitsu"><a href="#dodoitsu" class="nav-link navDodoitsu" data-toggle="tab">都々逸とは？</a></li>
+						<li class="nav-item w-25 itemHaiku">
+							<a href="#haiku" class="nav-link active navHaiku" data-toggle="tab">
+								俳<span class="mobileHidden">句</span>・川<span class="mobileHidden">柳とは？</span>
+							</a>
+						</li>
+						<li class="nav-item w-25 itemTanka">
+							<a href="#tanka" class="nav-link navTanka" data-toggle="tab">
+								短歌<span class="mobileHidden">とは？</span>
+							</a>
+						</li>
+						<li class="nav-item w-25 itemChoka">
+							<a href="#choka" class="nav-link navChoka" data-toggle="tab">
+								長歌<span class="mobileHidden">とは？</span>
+							</a>
+						</li>
+						<li class="nav-item w-25 itemDodoitsu">
+							<a href="#dodoitsu" class="nav-link navDodoitsu" data-toggle="tab">
+								都々逸<span class="mobileHidden">とは？</span>
+							</a>
+						</li>
 					</ul>
 					<div class="tab-content">
 						<div id="haiku" class="tab-pane py-4 active haikuTab"><jsp:include page="../include/haiku.jsp" flush="true" /></div>

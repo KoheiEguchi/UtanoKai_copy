@@ -10,7 +10,7 @@
 <body>
 	<div class="px-4">
 		<p class="text-left">
-			<span>都々逸(どどいつ)とは、</span><span>七・七・七・五の</span><span>二十六音でできた</span><span>俗謡です。</span>
+			<span>都々逸(どどいつ)とは、</span><span>七・七・七・五、</span><span>または五・七・七・七・五の</span><span>組み合わせからなる</span><span>俗謡です。</span>
 		</p>
 		<p class="text-left">
 			<span>幕末から</span><span>明治にかけて</span><span>広く歌われ、</span>
