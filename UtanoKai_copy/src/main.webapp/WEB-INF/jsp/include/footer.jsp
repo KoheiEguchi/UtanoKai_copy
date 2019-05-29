@@ -12,6 +12,7 @@
 		<c:if test="${name != null}">
 			<p class="leftSide"><a href="Login"><input class="btn btn-warning btn-lg shadow" type="button" value="退室"></a></p>
 		</c:if>
+		<p class="rightSide"><a href="Forum"><input class="btn btn-light btn-lg shadow" type="button" value="質問はこちら"></a></p>
 	</div>
 </body>
 </html>

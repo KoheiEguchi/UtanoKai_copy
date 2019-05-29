@@ -50,40 +50,47 @@ public class Login extends HttpServlet {
 			request.setAttribute("msg", "退会手続きを完了いたしました。");
 			doGet(request, response);
 		}else {
-			//入会直後
-			String userCreate = (String)request.getAttribute("userCreate");
-			if(userCreate != null) {
-				request.setAttribute("msg", "入会を受け付けました。");
+			//質問、意見送信後
+			String forum = (String)request.getAttribute("forum");
+			if(forum != null) {
+				request.setAttribute("msg", "ご質問・ご意見を承りました。");
 				doGet(request, response);
 			}else {
-				HttpSession session = request.getSession();
-				request.setCharacterEncoding("UTF-8");
-				
-				//俳号と合言葉を取得
-				String name = request.getParameter("name");
-				String password = request.getParameter("password");
-				
-				//空欄がある場合
-				if(name == null || password == null) {
-					request.setAttribute("msg", "俳号と合言葉を共にお教えください。");
+				//入会直後
+				String userCreate = (String)request.getAttribute("userCreate");
+				if(userCreate != null) {
+					request.setAttribute("msg", "入会を受け付けました。");
 					doGet(request, response);
-				//空欄なく入力できている場合
 				}else {
-					//合言葉を暗号化
-					String safetyPassword = PasswordUtil.getSafetyPassword(password, name);
-					UserDAO dao = new UserDAO();
-					int loginCheck = 0;
-					loginCheck = dao.loginCheck(name, safetyPassword);
+					HttpSession session = request.getSession();
+					request.setCharacterEncoding("UTF-8");
 					
-					//認証に失敗した場合
-					if(loginCheck == 0){
-						request.setAttribute("msg", "正しくお教えください。");
+					//俳号と合言葉を取得
+					String name = request.getParameter("name");
+					String password = request.getParameter("password");
+					
+					//空欄がある場合
+					if(name == null || password == null) {
+						request.setAttribute("msg", "俳号と合言葉を共にお教えください。");
 						doGet(request, response);
-					//成功した場合
+					//空欄なく入力できている場合
 					}else {
-						session.setAttribute("name", name);
-						RequestDispatcher dispatcher = request.getRequestDispatcher("./Top");
-						dispatcher.forward(request,response);
+						//合言葉を暗号化
+						String safetyPassword = PasswordUtil.getSafetyPassword(password, name);
+						UserDAO dao = new UserDAO();
+						int loginCheck = 0;
+						loginCheck = dao.loginCheck(name, safetyPassword);
+						
+						//認証に失敗した場合
+						if(loginCheck == 0){
+							request.setAttribute("msg", "正しくお教えください。");
+							doGet(request, response);
+						//成功した場合
+						}else {
+							session.setAttribute("name", name);
+							RequestDispatcher dispatcher = request.getRequestDispatcher("./Top");
+							dispatcher.forward(request,response);
+						}
 					}
 				}
 			}

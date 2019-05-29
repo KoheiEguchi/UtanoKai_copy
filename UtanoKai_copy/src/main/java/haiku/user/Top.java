@@ -95,7 +95,10 @@ public class Top extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		String forum = (String)request.getAttribute("forum");
+		if(forum != null) {
+			request.setAttribute("msg", "ご質問・ご意見を承りました。");
+		}
 		doGet(request, response);
 	}
 
