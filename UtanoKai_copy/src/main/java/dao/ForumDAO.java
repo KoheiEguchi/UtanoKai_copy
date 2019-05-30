@@ -31,6 +31,7 @@ public class ForumDAO extends DAOConnection{
 			
 			while(rs.next()) {
 				ForumBean bean = new ForumBean();
+				bean.setId(rs.getInt("forum_id"));
 				bean.setName(rs.getString("name"));
 				bean.setComment(rs.getString("comment"));
 				bean.setCommentDate(rs.getDate("comment_date"));
@@ -43,5 +44,45 @@ public class ForumDAO extends DAOConnection{
 			allClose(ps, conn);
 		}
 		return forumList;
+	}
+	
+	//削除する投稿を取得
+	public ArrayList<ForumBean> banComment(int id){
+		ArrayList<ForumBean> banComment = new ArrayList<ForumBean>();
+		try {
+			conn = getConnection();
+			ps = conn.prepareStatement("SELECT * FROM forum WHERE forum_id = ?");
+			ps.setInt(1, id);
+			rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				ForumBean bean = new ForumBean();
+				bean.setId(rs.getInt("forum_id"));
+				bean.setName(rs.getString("name"));
+				bean.setComment(rs.getString("comment"));
+				bean.setCommentDate(rs.getDate("comment_date"));
+				bean.setCommentTime(rs.getTime("comment_time"));
+				banComment.add(bean);
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			allClose(ps, conn);
+		}
+		return banComment;
+	}
+	
+	//指定された投稿を削除
+	public void commentBAN(int id) {
+		try {
+			conn = getConnection();
+			ps = conn.prepareStatement("DELETE FROM forum WHERE forum_id = ?");
+			ps.setInt(1, id);
+			ps.executeUpdate();
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			allClose(ps, conn);
+		}
 	}
 }

@@ -26,7 +26,7 @@
 						<div class="bg-info my-3 py-4"><jsp:include page="../include/tanka.jsp" flush="true" /></div>
 					</c:if>
 					<c:if test="${genreName == '長歌'}">
-						<div class="bg-warning my-3 py-4"><jsp:include page="../include/choka.jsp" flush="true" /></div>
+						<div class="bg-warning my-3 py-4"><jsp:include page="../include/sedoka.jsp" flush="true" /></div>
 					</c:if>
 					<c:if test="${genreName == '都々逸'}">
 						<div class="bg-danger my-3 py-4"><div class="whiteWord"><jsp:include page="../include/dodoitsu.jsp" flush="true" /></div></div>

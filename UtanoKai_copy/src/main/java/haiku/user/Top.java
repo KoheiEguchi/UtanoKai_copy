@@ -49,9 +49,9 @@ public class Top extends HttpServlet {
 				case 2:
 					request.setAttribute("newTanka", newHaiku);
 					break;
-				//長歌
+				//旋頭歌
 				case 3:
-					request.setAttribute("newChoka", newHaiku);
+					request.setAttribute("newSedoka", newHaiku);
 					break;
 				//都々逸
 				case 4:
@@ -72,9 +72,9 @@ public class Top extends HttpServlet {
 				case 2:
 					request.setAttribute("goodTanka", goodHaiku);
 					break;
-				//長歌
+				//旋頭歌
 				case 3:
-					request.setAttribute("goodChoka", goodHaiku);
+					request.setAttribute("goodSedoka", goodHaiku);
 					break;
 				//都々逸
 				case 4:

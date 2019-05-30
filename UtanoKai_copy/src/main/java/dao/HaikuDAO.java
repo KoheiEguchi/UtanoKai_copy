@@ -4,7 +4,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import beans.HaikuBean;
-import haiku.Common;
 
 public class HaikuDAO extends DAOConnection{
 	//最新の歌を取得

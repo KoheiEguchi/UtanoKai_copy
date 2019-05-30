@@ -11,7 +11,6 @@ import haiku.Common;
 public class DAOConnection {
 	public static Connection conn = null;
 	public static PreparedStatement ps = null;
-	
 	public static ResultSet rs = null;
 	
 	Common common = new Common();

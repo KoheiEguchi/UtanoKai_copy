@@ -54,7 +54,7 @@
 										<input type="radio" name="genre" value="2"><span class="font py-2">短歌</span>
 									</label>
 									<label class="btn btn-outline-warning shadow composeBtn">
-										<input type="radio" name="genre" value="3"><span class="font py-2">長歌</span>
+										<input type="radio" name="genre" value="3"><span class="font py-2">旋頭歌</span>
 									</label>
 									<label class="btn btn-outline-danger shadow composeBtn">
 										<input type="radio" name="genre" value="4"><span class="font py-2">都々逸</span>

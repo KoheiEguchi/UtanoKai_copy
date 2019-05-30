@@ -63,9 +63,9 @@ public class UserDetail extends HttpServlet {
 				case 2:
 					request.setAttribute("tankaList", haikuList);
 					break;
-				//長歌
+				//旋頭歌
 				case 3:
-					request.setAttribute("chokaList", haikuList);
+					request.setAttribute("sedokaList", haikuList);
 					break;
 				//都々逸
 				case 4:

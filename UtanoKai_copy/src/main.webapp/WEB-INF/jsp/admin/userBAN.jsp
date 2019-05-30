@@ -13,7 +13,7 @@
 	<div id="loaded" class="container">
 		<jsp:include page="../include/header.jsp" flush="true" />
 		<div class="main">
-			<h1 class="space">強制退会</h1>
+			<h1 class="mt-4">強制退会</h1>
 			<jsp:include page="../include/msg.jsp" flush="true" />
 			<form action="UserBAN?id=${id}" method="POST">
 				<c:forEach items="${banUser}" var="user">

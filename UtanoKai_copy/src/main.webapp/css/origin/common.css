@@ -26,6 +26,13 @@ input[type="submit"], input[type="button"]{
 	outline: none;
 }
 
+/* 小画面で非表示 */
+@media(max-width: 599px){
+	.mobileHidden{
+		display: none;
+	}
+}
+
 /*各一覧題部分の幅調整*/
 .haikusGenre{
 	margin-left: -15px;

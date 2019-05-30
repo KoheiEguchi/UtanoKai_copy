@@ -13,7 +13,6 @@ import javax.servlet.http.HttpSession;
 
 import beans.ForumBean;
 import dao.ForumDAO;
-import haiku.Common;
 
 /**
  * Servlet implementation class Forum
@@ -54,34 +53,41 @@ public class Forum extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession();
-		request.setCharacterEncoding("UTF-8");
-		
-		String name = request.getParameter("name");
-		String commentBefore = request.getParameter("comment");
-		
-		//本文が空白の場合
-		if(commentBefore == "") {
-			request.setAttribute("msg", "本文をお書きください。");
+		//削除してきた場合
+		if(request.getAttribute("delete") != null) {
+			request.setAttribute("msg", "削除しました。");
 			doGet(request, response);
-		//書かれていた場合
+		//削除に行っていない場合
 		}else {
-			//改行を反映
-			String comment = commentBefore.replace("\r\n", "<br>");
-			ForumDAO dao = new ForumDAO();
-			dao.commentWrite(name, comment);
+			HttpSession session = request.getSession();
+			request.setCharacterEncoding("UTF-8");
 			
-			request.setAttribute("forum", "forum");
+			String name = request.getParameter("name");
+			String commentBefore = request.getParameter("comment");
 			
-			String nameCheck = (String)session.getAttribute("name");
-			//会員認証前に来た場合
-			if(nameCheck == null) {
-				RequestDispatcher dispatcher = request.getRequestDispatcher("Login");
-				dispatcher.forward(request,response);
-			//認証後に来た場合
+			//本文が空白の場合
+			if(commentBefore == "") {
+				request.setAttribute("msg", "本文をお書きください。");
+				doGet(request, response);
+			//書かれていた場合
 			}else {
-				RequestDispatcher dispatcher = request.getRequestDispatcher("Top");
-				dispatcher.forward(request,response);
+				//改行を反映
+				String comment = commentBefore.replace("\r\n", "<br>");
+				ForumDAO dao = new ForumDAO();
+				dao.commentWrite(name, comment);
+				
+				request.setAttribute("forum", "forum");
+				
+				String nameCheck = (String)session.getAttribute("name");
+				//会員認証前に来た場合
+				if(nameCheck == null) {
+					RequestDispatcher dispatcher = request.getRequestDispatcher("Login");
+					dispatcher.forward(request,response);
+				//認証後に来た場合
+				}else {
+					RequestDispatcher dispatcher = request.getRequestDispatcher("Top");
+					dispatcher.forward(request,response);
+				}
 			}
 		}
 	}

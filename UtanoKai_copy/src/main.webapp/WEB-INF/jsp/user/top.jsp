@@ -103,34 +103,34 @@
 					</div>
 					<div class="row tops">
 						<div class="col-md-6 col-xs-12 order-md-2 bg-warning shadow list zoom">
-							<a class="linkMenuChoka blackHover" href="List?genre=3">
-								<div class="col-2 h3 font-weight-normal">長歌</div>
-								<c:forEach items="${newChoka}" var="choka">
-									<div class="col-1 text-left py-3">${choka.strComposeDate} ${choka.strComposeTime}</div>
-									<div class="col-4 text-left py-3 font-weight-bold">${choka.haiku}</div>
+							<a class="linkMenuSedoka blackHover" href="List?genre=3">
+								<div class="col-2 h3 font-weight-normal">旋頭歌</div>
+								<c:forEach items="${newSedoka}" var="sedoka">
+									<div class="col-1 text-left py-3">${sedoka.strComposeDate} ${sedoka.strComposeTime}</div>
+									<div class="col-2 text-left py-3 font-weight-bold">${sedoka.haiku}</div>
 									<div class="col-1 text-right mb-4">
-										<object><a class="linkName" href="UserDetail?name=${choka.composer}">${choka.composer}</a></object>
+										<object><a class="linkName" href="UserDetail?name=${sedoka.composer}">${sedoka.composer}</a></object>
 									</div>
-									<div class="col-1 mobileHidden">${choka.comment}</div>
+									<div class="col-3 mobileHidden">${sedoka.comment}</div>
 									<div class="col-2">
-										<c:if test="${name != choka.composer}">
+										<c:if test="${name != sedoka.composer}">
 											<p class="text-right">
 												<object>
-													<c:if test="${choka.strGood == 'noGood'}">
-														まだ<a class="linkGood" href="Good?id=${choka.id}&genre=3&top=top">高評価</a>されていません
+													<c:if test="${sedoka.strGood == 'noGood'}">
+														まだ<a class="linkGood" href="Good?id=${sedoka.id}&genre=3&top=top">高評価</a>されていません
 													</c:if>
-													<c:if test="${choka.strGood != 'noGood'}">
-														${choka.strGood}人から<a class="linkGood" href="Good?id=${choka.id}&genre=3&top=top">高評価</a>されました
+													<c:if test="${sedoka.strGood != 'noGood'}">
+														${sedoka.strGood}人から<a class="linkGood" href="Good?id=${sedoka.id}&genre=3&top=top">高評価</a>されました
 													</c:if>
 												</object>
 											</p>
 										</c:if>
-										<c:if test="${name == choka.composer}">
-											<c:if test="${choka.strGood == 'noGood'}">
+										<c:if test="${name == sedoka.composer}">
+											<c:if test="${sedoka.strGood == 'noGood'}">
 												<p class="text-right">まだ高評価されていません</p>
 											</c:if>
-											<c:if test="${choka.strGood != 'noGood'}">
-												<p class="text-right">${choka.strGood}人から高評価されました</p>
+											<c:if test="${sedoka.strGood != 'noGood'}">
+												<p class="text-right">${sedoka.strGood}人から高評価されました</p>
 											</c:if>
 										</c:if>
 									</div>
@@ -264,42 +264,42 @@
 						</c:forEach>
 					</div>
 					<div class="bg-info py-3 haikusGenre"></div>
-					<div class="bg-warning py-2 haikusGenre"><h3>長歌</h3></div>
+					<div class="bg-warning py-2 haikusGenre"><h3>旋頭歌</h3></div>
 					<div class="row">
-						<c:forEach items="${goodChoka}" var="choka">
-							<div class="col-md-4 col-xs-12 py-4 goodChoka shadow list zoom">
+						<c:forEach items="${goodSedoka}" var="sedoka">
+							<div class="col-md-4 col-xs-12 py-4 goodSedoka shadow list zoom">
 								<div class="row">
-									<a class="linkMenuChoka blackHover" href="List?genre=3">
-										<div class="col-1 text-left py-3">${choka.strComposeDate} ${choka.strComposeTime}</div>
-										<div class="col-5">
-											<div class="text-left py-3 font-weight-bold">${choka.haiku}</div>
-											<div class="text-right">
-												<object><a class="linkName" href="UserDetail?name=${choka.composer}">${choka.composer}</a></object>
-											</div>
+									<a class="linkMenuSedoka blackHover" href="List?genre=3">
+										<div class="col-2"></div>
+										<div class="col-1 text-left py-3">${sedoka.strComposeDate} ${sedoka.strComposeTime}</div>
+										<div class="col-2 text-left py-3 font-weight-bold">${sedoka.haiku}</div>
+										<div class="col-1 text-right">
+											<object><a class="linkName" href="UserDetail?name=${sedoka.composer}">${sedoka.composer}</a></object>
 										</div>
-										<div class="col-3 mobileHidden">${choka.comment}</div>
-										<div class="col-3">
-											<c:if test="${name != choka.composer}">
+										<div class="col-3 mobileHidden">${sedoka.comment}</div>
+										<div class="col-2">
+											<c:if test="${name != sedoka.composer}">
 												<p class="text-right">
 													<object>
-														<c:if test="${choka.strGood == 'noGood'}">
-															まだ<a class="linkGood" href="Good?id=${choka.id}&genre=3&top=top">高評価</a>されていません
+														<c:if test="${sedoka.strGood == 'noGood'}">
+															まだ<a class="linkGood" href="Good?id=${sedoka.id}&genre=3&top=top">高評価</a>されていません
 														</c:if>
-														<c:if test="${choka.strGood != 'noGood'}">
-															${choka.strGood}人から<a class="linkGood" href="Good?id=${choka.id}&genre=3&top=top">高評価</a>されました
+														<c:if test="${sedoka.strGood != 'noGood'}">
+															${sedoka.strGood}人から<a class="linkGood" href="Good?id=${sedoka.id}&genre=3&top=top">高評価</a>されました
 														</c:if>
 													</object>
 												</p>
 											</c:if>
-											<c:if test="${name == choka.composer}">
-												<c:if test="${choka.strGood == 'noGood'}">
+											<c:if test="${name == sedoka.composer}">
+												<c:if test="${sedoka.strGood == 'noGood'}">
 													<p class="text-right">まだ高評価されていません</p>
 												</c:if>
-												<c:if test="${choka.strGood != 'noGood'}">
-													<p class="text-right">${choka.strGood}人から高評価されました</p>
+												<c:if test="${sedoka.strGood != 'noGood'}">
+													<p class="text-right">${sedoka.strGood}人から高評価されました</p>
 												</c:if>
 											</c:if>
 										</div>
+										<div class="col-1"></div>
 									</a>
 								</div>
 							</div>
@@ -372,9 +372,9 @@
 								短歌<span class="mobileHidden">とは？</span>
 							</a>
 						</li>
-						<li class="nav-item w-25 itemChoka">
-							<a href="#choka" class="nav-link navChoka" data-toggle="tab">
-								長歌<span class="mobileHidden">とは？</span>
+						<li class="nav-item w-25 itemSedoka">
+							<a href="#sedoka" class="nav-link navSedoka" data-toggle="tab">
+								旋頭歌<span class="mobileHidden">とは？</span>
 							</a>
 						</li>
 						<li class="nav-item w-25 itemDodoitsu">
@@ -386,7 +386,7 @@
 					<div class="tab-content">
 						<div id="haiku" class="tab-pane py-4 active haikuTab"><jsp:include page="../include/haiku.jsp" flush="true" /></div>
 						<div id="tanka" class="tab-pane py-4 tankaTab"><jsp:include page="../include/tanka.jsp" flush="true" /></div>
-						<div id="choka" class="tab-pane py-4 chokaTab"><jsp:include page="../include/choka.jsp" flush="true" /></div>
+						<div id="sedoka" class="tab-pane py-4 sedokaTab"><jsp:include page="../include/sedoka.jsp" flush="true" /></div>
 						<div id="dodoitsu" class="tab-pane py-4 dodoitsuTab"><jsp:include page="../include/dodoitsu.jsp" flush="true" /></div>
 					</div>
 				</div>

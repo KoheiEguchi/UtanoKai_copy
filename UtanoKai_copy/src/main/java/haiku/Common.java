@@ -84,7 +84,7 @@ public class Common {
 			genreName = "短歌";
 			break;
 		case 3:
-			genreName = "長歌";
+			genreName = "旋頭歌";
 			break;
 		case 4:
 			genreName = "都々逸";

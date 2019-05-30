@@ -41,6 +41,13 @@
 								<div class="col-md-4 col-xs-6 font-weight-bold text-left border-bottom border-dark">${forum.comment}</div>
 								<div class="col-md-3 col-xs-1"></div>
 							</div>
+							<div class="row">
+								<div class="col-md-3 col-xs-1"></div>
+								<div class="col-md-6 col-xs-10">
+									<a href="ForumBAN?id=${forum.id}"><input class="btn btn-danger shadow" type="button" value="この投稿を削除する"></a>
+								</div>
+								<div class="col-md-3 col-xs-1"></div>
+							</div>
 							<br>
 						</div>
 						<div class="col-1"></div>

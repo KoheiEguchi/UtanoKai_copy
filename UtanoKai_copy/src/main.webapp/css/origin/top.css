@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*ここから新着歌の表示関連*/
-.linkMenuTanka, .linkMenuChoka{
+.linkMenuTanka, .linkMenuSedoka{
 	text-decoration: none;
 	display: block;
 	position: relative;
@@ -14,7 +14,7 @@
 	text-decoration: none;
 	display: block;
 }
-.linkMenuChoka:hover{
+.linkMenuSedoka:hover{
 	text-decoration: none;
 	display: block;
 }
@@ -65,7 +65,7 @@
 .goodTanka{
 	background-color: #87cefa;
 }
-.goodChoka{
+.goodSedoka{
 	background-color: #eee8aa;
 }
 .goodDodoitsu{
@@ -80,17 +80,11 @@
 .itemTanka{
 	background-color: #87cefa;
 }
-.itemChoka{
+.itemSedoka{
 	background-color: #eee8aa;
 }
 .itemDodoitsu{
 	background-color: #ffb6c1;
-}
-
-@media(max-width: 599px){
-	.mobileHidden{
-		display: none;
-	}
 }
 
 .nav-link{
@@ -108,7 +102,7 @@
 	background-color: #87cefa !important;
 	filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
 }
-.navChoka.active{
+.navSedoka.active{
 	color: black !important;
 	background-color: #eee8aa !important;
 	filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
@@ -129,7 +123,7 @@
 	background-color: #87cefa;
 	filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
 }
-.chokaTab, .navChoka:hover{
+.sedokaTab, .navSedoka:hover{
 	color: black;
 	background-color: #eee8aa;
 	filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.6));
