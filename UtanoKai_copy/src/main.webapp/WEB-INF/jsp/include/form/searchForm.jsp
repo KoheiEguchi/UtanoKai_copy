@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<jsp:include page="../include/head.jsp" flush="true" />
+	<jsp:include page="../display/head.jsp" flush="true" />
 	<title>検索用入力欄</title>
 </head>
 <body>

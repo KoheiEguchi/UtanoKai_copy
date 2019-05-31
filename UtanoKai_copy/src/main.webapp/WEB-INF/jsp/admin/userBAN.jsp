@@ -5,16 +5,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<jsp:include page="../include/head.jsp" flush="true" />
+	<jsp:include page="../include/display/head.jsp" flush="true" />
 	<title>強制退会</title>
 </head>
 <body>
-	<jsp:include page="../include/load.jsp" flush="true" />
+	<jsp:include page="../include/display/load.jsp" flush="true" />
 	<div id="loaded" class="container">
-		<jsp:include page="../include/header.jsp" flush="true" />
+		<jsp:include page="../include/display/header.jsp" flush="true" />
 		<div class="main">
 			<h1 class="mt-4">強制退会</h1>
-			<jsp:include page="../include/msg.jsp" flush="true" />
+			<jsp:include page="../include/display/msg.jsp" flush="true" />
 			<form action="UserBAN?id=${id}" method="POST">
 				<c:forEach items="${banUser}" var="user">
 					<div class="row">
@@ -56,7 +56,7 @@
 				<p><a href="UserList"><input class="btn btn-info shadow" type="button" value="会員一覧に戻る"></a></p>
 			</form>
 		</div>
-		<jsp:include page="../include/footer.jsp" flush="true" />
+		<jsp:include page="../include/display/footer.jsp" flush="true" />
 	</div>
 </body>
 </html>

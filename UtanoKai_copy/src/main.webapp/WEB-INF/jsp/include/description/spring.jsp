@@ -3,19 +3,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<jsp:include page="../include/head.jsp" flush="true" />
+	<jsp:include page="../display/head.jsp" flush="true" />
 	<title>春の季語</title>
 </head>
 <body>
 	<ul class="nav nav-tabs">
-		<li class="nav-item w-25 itemSpring"><a href="#allSpr" class="nav-link active navSpring" data-toggle="tab">三春(全春)</a></li>
-		<li class="nav-item w-25 itemSpring"><a href="#feb" class="nav-link navSpring" data-toggle="tab">初春(二月)</a></li>
-		<li class="nav-item w-25 itemSpring"><a href="#mar" class="nav-link navSpring" data-toggle="tab">仲春(三月)</a></li>
-		<li class="nav-item w-25 itemSpring"><a href="#apr" class="nav-link navSpring" data-toggle="tab">晩春(四月)</a></li>
+		<li class="nav-item w-25 itemSpring">
+			<a href="#allSpr" class="nav-link active navSpring" data-toggle="tab">三春<span class="mobileHidden">(春全般)</span></a>
+		</li>
+		<li class="nav-item w-25 itemSpring">
+			<a href="#feb" class="nav-link navSpring" data-toggle="tab">初春<span class="mobileHidden">(二月)</span></a>
+		</li>
+		<li class="nav-item w-25 itemSpring">
+			<a href="#mar" class="nav-link navSpring" data-toggle="tab">仲春<span class="mobileHidden">(三月)</span></a>
+		</li>
+		<li class="nav-item w-25 itemSpring">
+			<a href="#apr" class="nav-link navSpring" data-toggle="tab">晩春<span class="mobileHidden">(四月)</span></a>
+		</li>
 	</ul>
 	<div class="tab-content">
 		<div id="allSpr" class="tab-pane px-4 py-4 active springTab">
-			<div class="h4 mb-4">三春の季語</div>
+			<div class="h4 mb-4">三春(春全般)の季語</div>
 			<p>【時候】</p>
 			<p>暖か　麗か　朧月夜　木の芽時　春暁　春昼　遅日　長閑　春　春の朝　春の暮　春の霜　春の日　春の夕　春の宵　春の夜　春日和　春北斗　春三日月　日永</p>
 			<br>
@@ -46,7 +54,7 @@
 				春の草　春の蜜柑　鹿尾菜　雛菊　古草　へご　防風　三葉芹　海松　海雲　蓬　若布</p>
 		</div>
 		<div id="feb" class="tab-pane px-4 py-4 springTab">
-			<div class="h4 mb-4">初春の季語</div>
+			<div class="h4 mb-4">初春(二月)の季語</div>
 			<p>【時候】</p>
 			<p>魚氷に上る　雨水　おれづみ　獺魚を祭る　寒明　旧正月　冴返る　春寒　初春　早春　遅春　二月　二月尽　春浅し　春まけて　春めく　余寒　立春</p>
 			<br>
@@ -71,7 +79,7 @@
 				ちゃるめる草　蓴生ふ　猫の目草　猫柳　海苔　はこべ　薔薇の芽　赤楊の花　蕗の薹　菠薐草　牡丹の芽　盆梅　松雪草　真菜　金縷梅　水灌菜　壬生菜　ミモザ</p>
 		</div>
 		<div id="mar" class="tab-pane px-4 py-4 springTab">
-			<div class="h4 mb-4">仲春の季語</div>
+			<div class="h4 mb-4">仲春(三月)の季語</div>
 			<p>【時候】</p>
 			<p>如月　啓蟄　三月　春社　春分　鷹化して鳩と為る　仲春　初朔日　彼岸　龍天に登る</p>
 			<br>
@@ -105,7 +113,7 @@
 				双葉　真菰の芽　松菜　水草生ふ　三椏の花　木蓮　ものの芽　柳の芽　楊梅の花　雪間草　雪柳　嫁菜　喇叭水仙　柳絮　令法　連翹　若紫　分葱　蕨</p>
 		</div>
 		<div id="apr" class="tab-pane px-4 py-4 springTab">
-			<div class="h4 mb-4">晩春の季語</div>
+			<div class="h4 mb-4">晩春(四月)の季語</div>
 			<p>【時候】</p>
 			<p>蛙の目借り時　暮の春　穀雨　三月尽　四月　清明　田鼠化して鶉と為る　夏近し　苗代時　八十八夜　花冷え　春暑し　春惜しむ　春深し　晩春　弥生　花時　行く春</p>
 			<br>

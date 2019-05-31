@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<jsp:include page="../include/head.jsp" flush="true" />
+	<jsp:include page="head.jsp" flush="true" />
 	<title>フッター</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
 		<c:if test="${name != null}">
 			<p class="leftSide"><a href="Login"><input class="btn btn-warning btn-lg shadow" type="button" value="退室"></a></p>
 		</c:if>
-		<p class="rightSide"><a href="Forum"><input class="btn btn-light btn-lg shadow" type="button" value="質問はこちら"></a></p>
+		<p class="rightSide"><a href="Forum"><input class="btn btn-light btn-lg shadow" type="button" value="ご意見はこちら"></a></p>
 	</div>
 </body>
 </html>

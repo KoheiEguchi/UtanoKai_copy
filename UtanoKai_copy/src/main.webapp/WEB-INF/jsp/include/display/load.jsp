@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<jsp:include page="../include/head.jsp" flush="true" />
+	<jsp:include page="head.jsp" flush="true" />
 	<title>読み込み中</title>
 </head>
 <body>

@@ -5,16 +5,16 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/origin/compose.css">
-	<jsp:include page="../include/head.jsp" flush="true" />
+	<jsp:include page="../include/display/head.jsp" flush="true" />
 	<title>新たに詠む</title>
 </head>
 <body>
-	<jsp:include page="../include/load.jsp" flush="true" />
+	<jsp:include page="../include/display/load.jsp" flush="true" />
 	<div id="loaded" class="container">
-		<jsp:include page="../include/header.jsp" flush="true" />
+		<jsp:include page="../include/display/header.jsp" flush="true" />
 		<div class="main">
-			<jsp:include page="../include/title.jsp" flush="true" />
-			<jsp:include page="../include/msg.jsp" flush="true" />
+			<jsp:include page="../include/display/title.jsp" flush="true" />
+			<jsp:include page="../include/display/msg.jsp" flush="true" />
 			<h3 id="top" class="py-3">新たに詠む</h3>
 			<details>
 				<summary>季語一覧</summary>
@@ -29,10 +29,10 @@
 							<li class="nav-item w-25 itemWinter"><a href="#winter" class="nav-link navWinter" data-toggle="tab">冬</a></li>
 						</ul>
 						<div class="tab-content mb-1">
-							<div id="spring" class="tab-pane active springTab"><jsp:include page="../include/spring.jsp" flush="true" /></div>
-							<div id="summer" class="tab-pane summerTab"><jsp:include page="../include/summer.jsp" flush="true" /></div>
-							<div id="autumn" class="tab-pane autumnTab"><jsp:include page="../include/autumn.jsp" flush="true" /></div>
-							<div id="winter" class="tab-pane winterTab"><jsp:include page="../include/winter.jsp" flush="true" /></div>
+							<div id="spring" class="tab-pane active springTab"><jsp:include page="../include/description/spring.jsp" flush="true" /></div>
+							<div id="summer" class="tab-pane summerTab"><jsp:include page="../include/description/summer.jsp" flush="true" /></div>
+							<div id="autumn" class="tab-pane autumnTab"><jsp:include page="../include/description/autumn.jsp" flush="true" /></div>
+							<div id="winter" class="tab-pane winterTab"><jsp:include page="../include/description/winter.jsp" flush="true" /></div>
 						</div>
 					</div>
 					<div class="col-1"></div>
@@ -80,7 +80,7 @@
 				<p class="py-4"><a href="Top"><input class="btn btn-info shadow" type="button" value="戻る"></a></p>
 			</form>
 		</div>
-		<jsp:include page="../include/footer.jsp" flush="true" />
+		<jsp:include page="../include/display/footer.jsp" flush="true" />
 	</div>
 </body>
 </html>

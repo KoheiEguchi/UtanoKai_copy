@@ -4,7 +4,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/origin/description.css">
-	<jsp:include page="../include/head.jsp" flush="true" />
+	<jsp:include page="../display/head.jsp" flush="true" />
 	<title>俳句・川柳</title>
 </head>
 <body>

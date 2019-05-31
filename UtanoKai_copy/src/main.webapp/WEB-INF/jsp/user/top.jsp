@@ -6,20 +6,21 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/origin/top.css">
-	<jsp:include page="../include/head.jsp" flush="true" />
+	<jsp:include page="../include/display/head.jsp" flush="true" />
 	<title>ようこそ</title>
 </head>
 <body>
-	<jsp:include page="../include/load.jsp" flush="true" />
+	<jsp:include page="../include/display/load.jsp" flush="true" />
 	<div id="loaded" class="container">
-		<jsp:include page="../include/header.jsp" flush="true" />
+		<jsp:include page="../include/display/header.jsp" flush="true" />
 		<div class="main">
-			<jsp:include page="../include/title.jsp" flush="true" />
-			<jsp:include page="../include/msg.jsp" flush="true" />
+			<jsp:include page="../include/display/title.jsp" flush="true" />
+			<jsp:include page="../include/display/msg.jsp" flush="true" />
 			<div class="py-4">
 				<h3>ようこそ ${name}様</h3>
 				<p class="mt-3"><a href="Compose"><input class="btn btn-success btn-lg shadow" type="button" value="新たに詠む"></a></p>
 			</div>
+			<jsp:include page="../include/description/topDesc.jsp" flush="true" />
 			
 			<!-- ここから最新の歌一覧 -->
 			<div class="row">
@@ -384,10 +385,10 @@
 						</li>
 					</ul>
 					<div class="tab-content">
-						<div id="haiku" class="tab-pane py-4 active haikuTab"><jsp:include page="../include/haiku.jsp" flush="true" /></div>
-						<div id="tanka" class="tab-pane py-4 tankaTab"><jsp:include page="../include/tanka.jsp" flush="true" /></div>
-						<div id="sedoka" class="tab-pane py-4 sedokaTab"><jsp:include page="../include/sedoka.jsp" flush="true" /></div>
-						<div id="dodoitsu" class="tab-pane py-4 dodoitsuTab"><jsp:include page="../include/dodoitsu.jsp" flush="true" /></div>
+						<div id="haiku" class="tab-pane py-4 active haikuTab"><jsp:include page="../include/description/haiku.jsp" flush="true" /></div>
+						<div id="tanka" class="tab-pane py-4 tankaTab"><jsp:include page="../include/description/tanka.jsp" flush="true" /></div>
+						<div id="sedoka" class="tab-pane py-4 sedokaTab"><jsp:include page="../include/description/sedoka.jsp" flush="true" /></div>
+						<div id="dodoitsu" class="tab-pane py-4 dodoitsuTab"><jsp:include page="../include/description/dodoitsu.jsp" flush="true" /></div>
 					</div>
 				</div>
 				<div class="col-md-2 col-xs-1"></div>
@@ -398,7 +399,7 @@
 			</c:if>
 			<p class="my-5"><a href="Login"><input class="btn btn-warning shadow" type="button" value="退室"></a></p>
 		</div>
-		<jsp:include page="../include/footer.jsp" flush="true" />
+		<jsp:include page="../include/display/footer.jsp" flush="true" />
 	</div>
 </body>
 </html>

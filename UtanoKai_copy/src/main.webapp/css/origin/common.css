@@ -33,6 +33,31 @@ input[type="submit"], input[type="button"]{
 	}
 }
 
+/*意見本文欄の大きさを画面により変更*/
+@media(max-width: 1024px){
+	.forumArea{
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/*閲覧媒体によりクリックとタップの表示を切り替え*/
+@media(min-width: 1024px){
+	.phoneScreen{
+		display: none;
+	}
+}
+@media(max-width: 1024px){
+	.pcScreen{
+		display: none;
+	}
+}
+/*説明欄の「高評価」の文字の色変え*/
+.descGood{
+	color: #f08300;
+	font-size: 120%;
+}
+
 /*各一覧題部分の幅調整*/
 .haikusGenre{
 	margin-left: -15px;
@@ -87,18 +112,19 @@ summary{
 	text-decoration: none;
 }
 
-/*ここから歌の拡大関連*/
-.zoom{
-	transition: .3s;
-	-webkit-transform: scale(1.0);
-  	transform: scale(1.0);
+/*大画面時カーソル合わせた歌を拡大する*/
+@media(min-width: 600px){
+	.zoom{
+		transition: .3s;
+		-webkit-transform: scale(1.0);
+	  	transform: scale(1.0);
+	}
+	.zoom:hover{
+		-webkit-transform: scale(1.05);
+	  	transform: scale(1.05);
+	  	z-index: 990;
+	}
 }
-.zoom:hover{
-	-webkit-transform: scale(1.05);
-  	transform: scale(1.05);
-  	z-index: 990;
-}
-/*ここまで歌の拡大関連*/
 
 /*文字を白くする*/
 .whiteWord{

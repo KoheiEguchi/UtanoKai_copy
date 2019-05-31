@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import beans.ForumBean;
 
 public class ForumDAO extends DAOConnection{
-	//質問、意見書き込み
+	//意見書き込み
 	public void commentWrite(String name, String comment) {
 		try {
 			conn = getConnection();
@@ -21,7 +21,7 @@ public class ForumDAO extends DAOConnection{
 		}
 	}
 	
-	//質問、意見取得
+	//意見取得
 	public ArrayList<ForumBean> commentGet(){
 		ArrayList<ForumBean> forumList = new ArrayList<ForumBean>();
 		try {

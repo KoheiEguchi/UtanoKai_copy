@@ -5,42 +5,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<jsp:include page="../include/head.jsp" flush="true" />
+	<jsp:include page="../include/display/head.jsp" flush="true" />
 	<title>${genreName}</title>
 </head>
 <body>
-	<jsp:include page="../include/load.jsp" flush="true" />
+	<jsp:include page="../include/display/load.jsp" flush="true" />
 	<div id="loaded" class="container">
-		<jsp:include page="../include/header.jsp" flush="true" />
+		<jsp:include page="../include/display/header.jsp" flush="true" />
 		<div class="main">
-			<jsp:include page="../include/title.jsp" flush="true" />
+			<jsp:include page="../include/display/title.jsp" flush="true" />
 			<h3>${genreName}</h3>
-			<jsp:include page="../include/msg.jsp" flush="true" />
+			<jsp:include page="../include/display/msg.jsp" flush="true" />
 			<div class="row">
 				<div class="col-md-2 col-xs-1"></div>
 				<div class="col-md-8 col-xs-10">
 					<c:if test="${genreName == '俳句・川柳'}">
-						<div class="bg-success my-3 py-4"><div class="whiteWord"><jsp:include page="../include/haiku.jsp" flush="true" /></div></div>
+						<div class="bg-success my-3 py-4">
+							<div class="whiteWord"><jsp:include page="../include/description/haiku.jsp" flush="true" /></div>
+						</div>
 					</c:if>
 					<c:if test="${genreName == '短歌'}">
-						<div class="bg-info my-3 py-4"><jsp:include page="../include/tanka.jsp" flush="true" /></div>
+						<div class="bg-info my-3 py-4"><jsp:include page="../include/description/tanka.jsp" flush="true" /></div>
 					</c:if>
 					<c:if test="${genreName == '長歌'}">
-						<div class="bg-warning my-3 py-4"><jsp:include page="../include/sedoka.jsp" flush="true" /></div>
+						<div class="bg-warning my-3 py-4"><jsp:include page="../include/description/sedoka.jsp" flush="true" /></div>
 					</c:if>
 					<c:if test="${genreName == '都々逸'}">
-						<div class="bg-danger my-3 py-4"><div class="whiteWord"><jsp:include page="../include/dodoitsu.jsp" flush="true" /></div></div>
+						<div class="bg-danger my-3 py-4">
+							<div class="whiteWord"><jsp:include page="../include/description/dodoitsu.jsp" flush="true" /></div>
+						</div>
 					</c:if>
 				</div>
 				<div class="col-md-2 col-xs-1"></div>
 			</div>
 			<form action="List?genre=${genre}" method="POST">
-				<jsp:include page="../include/searchForm.jsp" flush="true" />
+				<jsp:include page="../include/form/searchForm.jsp" flush="true" />
 			</form>
 			<form action="List?genre=${genre}" method="POST">
-				<jsp:include page="../include/orderSelect.jsp" flush="true" />
+				<jsp:include page="../include/form/orderSelect.jsp" flush="true" />
 			</form>
-			<div class="row">
+			<jsp:include page="../include/description/topDesc.jsp" flush="true" />
+			<div class="row mt-5">
 				<div class="col-1"></div>
 				<div class="col-10">
 					<div class="bg-secondary py-1 haikusGenre">
@@ -142,7 +147,7 @@
 			</div>
 			<p class="mt-5"><a href="Top"><input class="btn btn-info shadow" type="button" value="戻る"></a></p>
 		</div>
-		<jsp:include page="../include/footer.jsp" flush="true" />
+		<jsp:include page="../include/display/footer.jsp" flush="true" />
 	</div>
 </body>
 </html>

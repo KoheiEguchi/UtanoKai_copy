@@ -6,7 +6,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/origin/userDetail.css">
-	<jsp:include page="../include/head.jsp" flush="true" />
+	<jsp:include page="../include/display/head.jsp" flush="true" />
 	<c:if test="${composerName == null}">
 		<title>${name}様の詳細</title>
 	</c:if>
@@ -15,12 +15,12 @@
 	</c:if>
 </head>
 <body>
-	<jsp:include page="../include/load.jsp" flush="true" />
+	<jsp:include page="../include/display/load.jsp" flush="true" />
 	<div id="loaded" class="container">
-		<jsp:include page="../include/header.jsp" flush="true" />
+		<jsp:include page="../include/display/header.jsp" flush="true" />
 		<div class="main">
-			<div><jsp:include page="../include/title.jsp" flush="true" /></div>
-			<jsp:include page="../include/msg.jsp" flush="true" />
+			<div><jsp:include page="../include/display/title.jsp" flush="true" /></div>
+			<jsp:include page="../include/display/msg.jsp" flush="true" />
 			<c:if test="${loginOk == null}">
 				<c:if test="${composerName == null}">
 					<h2 class="py-4">${name}様の詳細</h2>
@@ -507,7 +507,7 @@
 				<c:if test="${loginOk != null}">
 					<p>新しい情報をお教えください。</p>
 					<form action="UserDetail?loginOk&id=${id}" method="POST">
-						<jsp:include page="../include/createForm.jsp" flush="true" />
+						<jsp:include page="../include/form/createForm.jsp" flush="true" />
 						<p class="my-4"><input class="btn btn-success btn-lg shadow" type="submit" value="変更"></p>
 					</form>
 				</c:if>
@@ -519,7 +519,7 @@
 				</c:if>
 			</c:if>
 		</div>
-		<jsp:include page="../include/footer.jsp" flush="true" />
+		<jsp:include page="../include/display/footer.jsp" flush="true" />
 	</div>
 </body>
 </html>

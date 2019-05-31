@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<jsp:include page="../include/head.jsp" flush="true" />
+	<jsp:include page="../display/head.jsp" flush="true" />
 	<title>並び替え選択肢</title>
 </head>
 <body>

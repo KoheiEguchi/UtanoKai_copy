@@ -5,20 +5,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<jsp:include page="../include/head.jsp" flush="true" />
+	<jsp:include page="../include/display/head.jsp" flush="true" />
 	<link rel="stylesheet" type="text/css" href="css/origin/userList.css">
 	<title>会員一覧</title>
 </head>
 <body>
-	<jsp:include page="../include/load.jsp" flush="true" />
+	<jsp:include page="../include/display/load.jsp" flush="true" />
 	<div id="loaded" class="container">
-		<jsp:include page="../include/header.jsp" flush="true" />
+		<jsp:include page="../include/display/header.jsp" flush="true" />
 		<div class="main">
-			<jsp:include page="../include/title.jsp" flush="true" />
+			<jsp:include page="../include/display/title.jsp" flush="true" />
 			<h2>会員一覧</h2>
-			<jsp:include page="../include/msg.jsp" flush="true" />
+			<jsp:include page="../include/display/msg.jsp" flush="true" />
 			<form action="UserList" method="POST">
-				<jsp:include page="../include/searchForm.jsp" flush="true" />
+				<jsp:include page="../include/form/searchForm.jsp" flush="true" />
 			</form>
 			<form action="UserList?userOrder" method="POST">
 				<div class="row py-4">
@@ -88,7 +88,7 @@
 			</c:forEach>
 			<p class="mt-5"><a href="Top"><input class="btn btn-info shadow" type="button" value="戻る"></a></p>
 		</div>
-		<jsp:include page="../include/footer.jsp" flush="true" />
+		<jsp:include page="../include/display/footer.jsp" flush="true" />
 	</div>
 </body>
 </html>

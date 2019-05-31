@@ -3,19 +3,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<jsp:include page="../include/head.jsp" flush="true" />
+	<jsp:include page="../display/head.jsp" flush="true" />
 	<title>冬の季語</title>
 </head>
 <body>
 	<ul class="nav nav-tabs">
-		<li class="nav-item w-25 itemWinter"><a href="#allWin" class="nav-link active navWinter" data-toggle="tab">三冬(全冬)</a></li>
-		<li class="nav-item w-25 itemWinter"><a href="#nov" class="nav-link navWinter" data-toggle="tab">初冬(十一月)</a></li>
-		<li class="nav-item w-25 itemWinter"><a href="#dec" class="nav-link navWinter" data-toggle="tab">仲冬(十二月)・暮</a></li>
-		<li class="nav-item w-25 itemWinter"><a href="#jan" class="nav-link navWinter" data-toggle="tab">晩冬(一月)・新年</a></li>
+		<li class="nav-item w-25 itemWinter">
+			<a href="#allWin" class="nav-link active navWinter" data-toggle="tab">三冬<span class="mobileHidden">(冬全般)</span></a>
+		</li>
+		<li class="nav-item w-25 itemWinter">
+			<a href="#nov" class="nav-link navWinter" data-toggle="tab">初冬<span class="mobileHidden">(十一月)</span></a>
+		</li>
+		<li class="nav-item w-25 itemWinter">
+			<a href="#dec" class="nav-link navWinter" data-toggle="tab">仲冬<span class="mobileHidden">(十二月)・暮</span></a>
+		</li>
+		<li class="nav-item w-25 itemWinter">
+			<a href="#jan" class="nav-link navWinter" data-toggle="tab">晩冬<span class="mobileHidden">(一月)・新年</span></a>
+		</li>
 	</ul>
 	<div class="tab-content">
 		<div id="allWin" class="tab-pane px-4 py-4 active winterTab">
-			<div class="h4 mb-4">三冬の季語</div>
+			<div class="h4 mb-4">三冬(冬全般)の季語</div>
 			<p>【時候】</p>
 			<p>冱つ　鐘氷る　凍る　寒し　冴ゆ　霜夜　短日　冷たし　冬　冬暖　冬ざれ　冬の朝　冬の暮　冬の夜</p>
 			<br>
@@ -55,7 +63,7 @@
 				芽キャベツ　藪柑子　龍の玉　侘助　冬桜</p>
 		</div>
 		<div id="nov" class="tab-pane px-4 py-4 winterTab">
-			<div class="h4 mb-4">初冬の季語</div>
+			<div class="h4 mb-4">初冬(十一月)の季語</div>
 			<p>【時候】</p>
 			<p>神無月　小春　十一月　小雪　冬浅し　冬めく　水始めて氷る　立冬　冬の日</p>
 			<br>
@@ -84,12 +92,16 @@
 		</div>
 		<div id="dec" class="tab-pane winterTab">
 			<ul class="nav nav-tabs">
-				<li class="nav-item w-50 itemWinter"><a href="#dec1" class="nav-link active navWinter" data-toggle="tab">仲冬(12月)</a></li>
-				<li class="nav-item w-50 itemWinter"><a href="#eve" class="nav-link navWinter" data-toggle="tab">暮</a></li>
+				<li class="nav-item w-50 itemWinter">
+					<a href="#dec1" class="nav-link active navWinter" data-toggle="tab">仲冬<span class="mobileHidden">(十二月)</span></a>
+				</li>
+				<li class="nav-item w-50 itemWinter">
+					<a href="#eve" class="nav-link navWinter" data-toggle="tab">暮</a>
+				</li>
 			</ul>
 			<div class="tab-content">
 				<div id="dec1" class="tab-pane px-4 py-4 active winterTab">
-					<div class="h4 mb-4">仲冬の季語</div>
+					<div class="h4 mb-4">仲冬(十二月)の季語</div>
 					<p>【時候】</p>
 					<p>一陽の嘉節　霜月　十二月　朔旦冬至　大雪　仲冬　冬至　宮線を添ふ</p>
 					<br>
@@ -139,12 +151,16 @@
 		</div>
 		<div id="jan" class="tab-pane winterTab">
 			<ul class="nav nav-tabs">
-				<li class="nav-item w-50 itemWinter"><a href="#jan1" class="nav-link active navWinter" data-toggle="tab">晩冬(1月)</a></li>
-				<li class="nav-item w-50 itemWinter"><a href="#new" class="nav-link navWinter" data-toggle="tab">新年</a></li>
+				<li class="nav-item w-50 itemWinter">
+					<a href="#jan1" class="nav-link active navWinter" data-toggle="tab">晩冬<span class="mobileHidden">(一月)</span></a>
+				</li>
+				<li class="nav-item w-50 itemWinter">
+					<a href="#new" class="nav-link navWinter" data-toggle="tab">新年</a>
+				</li>
 			</ul>
 			<div class="tab-content">
 				<div id="jan1" class="tab-pane px-4 py-4 active winterTab">
-				<div class="h4 mb-4">晩冬の季語</div>
+				<div class="h4 mb-4">晩冬(一月)の季語</div>
 					<p>【時候】</p>
 					<p>一月　寒土用　寒の入　寒の内　寒波　厳寒　三寒四温　しばれる　小寒　節季　節分　大寒　大呂　年内立春　春近し　春隣　春待つ　晩冬　日脚伸ぶ　冬尽く　冬深し</p>
 					<br>

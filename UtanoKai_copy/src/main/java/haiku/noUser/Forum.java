@@ -41,7 +41,7 @@ public class Forum extends HttpServlet {
 		}else {
 			ArrayList<ForumBean> forumList = new ArrayList<ForumBean>();
 			ForumDAO dao = new ForumDAO();
-			//質問、意見を取得
+			//意見を取得
 			forumList = dao.commentGet();
 			request.setAttribute("forumList", forumList);
 		}
